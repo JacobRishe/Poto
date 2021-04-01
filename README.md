@@ -16,6 +16,7 @@ In the future, I would like for users to be able to add their own buttons displa
 - As a user, I want to be able to delete my account.
 - As a user, I want to be able to add a "Poll".
 - As a user, I want to be able to vote on other Polls.
+- As a user, I want to be able to see my polls on the My Polls page with the percentages of each answer.
 - As a user, I want to see my polls displayed on the home page.
 - As a user, I want to see percentages display after I click the yes or no button.
 - As a user, I want an intuitive and clean UI.
