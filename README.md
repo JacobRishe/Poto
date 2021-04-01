@@ -1,4 +1,4 @@
-# Poto
+# PoTo
 Full-Stack React Application 
 
 Poto allows logged-in users to view a list of polls created by other users, and then give their opinion by clicking the yes or no button. After clicking the percentage displays immediately after the user clicks yes or no.
