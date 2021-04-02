@@ -1,13 +1,15 @@
 # PoTo
 Full-Stack React Application 
 
-Poto allows logged-in users to view a list of polls created by other users, and then give their opinion by clicking the yes or no button. After clicking the percentage displays immediately after the user clicks yes or no.
+PoTo is created for indecisive people like myself. I like to have someone to help me make a decisions whether it's making pizza for dinner or what programming language I should learn next. This app keeps track of users inputs to help you make a decision. 
 
-The user's polls are displayed on their personal polls page, and the user has the ability to remove their poll from this page. 
+PoTo allows logged-in users to view a list of polls created by other users, and then give their opinion by clicking the yes or no button. After clicking, the percentage displays immediately after the user clicks yes or no. The logged-in user can also create their own poll to allow others to cast their opinion on their question as well.
 
-The app features full user authentication and allows for the user to create an account for with a unique email, username, password, and profile photo. 
+The user's polls are displayed on their personal polls page, and the user has the ability to remove their poll from this page. If the user wants to vote on a pole this will be done on the Home Page.
 
-In the future, I would like for users to be able to add their own buttons displaying what they want the other users to decide on. Want the user to be able to upload their own memoji and have it displayed next to their poll that they posted. 
+The app features full user authentication and allows for the user to create an account with a unique email, username, password.
+
+In the future, I would like for users to be able to add their own buttons displaying a this or that question rather than a yes or no question. Want the user to be able to upload their own memoji and have it displayed next to their poll that they posted. 
 
 # Technologies Used
 MongoDB
