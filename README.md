@@ -10,7 +10,7 @@ The app features full user authentication and allows for the user to create an a
 In the future, I would like for users to be able to add their own buttons displaying what they want the other users to decide on. Want the user to be able to upload their own memoji and have it displayed next to their poll that they posted. 
 
 # Technologies Used
-Mongo
+MongoDB
 Express
 React
 Node.js
