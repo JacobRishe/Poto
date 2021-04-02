@@ -7,7 +7,7 @@ The user's polls are displayed on their personal polls page, and the user has th
 
 The app features full user authentication and allows for the user to create an account for with a unique email, username, password, and profile photo. 
 
-In the future, I would like for users to be able to add their own buttons displaying what they want the other users to decide on.
+In the future, I would like for users to be able to add their own buttons displaying what they want the other users to decide on. Want the user to be able to upload their own memoji and have it displayed next to their poll that they posted. 
 
 # Technologies Used
 Mongo
@@ -37,8 +37,8 @@ Google Chrome Developer Tools
 
 
 ## In Future
--as a user, I want to be able to add my own memoji picture for my profile to display on the home page.
--as a user, I want to be able to create my own Poll buttons so I can have other users vote between two options.
--as a user, I want to be able to view this on a desktop and ipad. 
--as a user, I want to be able to login via email, facebook, or etc.
+- As a user, I want to be able to add my own memoji picture for my profile to display on the home page.
+- As a user, I want to be able to create my own Poll buttons so I can have other users vote between two options.
+- As a user, I want to be able to view this on a desktop and ipad. 
+- As a user, I want to be able to login via email, facebook, or etc.
 
