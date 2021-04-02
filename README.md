@@ -7,7 +7,20 @@ The user's polls are displayed on their personal polls page, and the user has th
 
 The app features full user authentication and allows for the user to create an account for with a unique email, username, password, and profile photo. 
 
-In the future, I would like for users to be able to add their own buttons displaying what they want the other users to pick. 
+In the future, I would like for users to be able to add their own buttons displaying what they want the other users to decide on.
+
+# TECHNOLOGIES USED
+Mongo
+Express
+React
+Node.js
+Javascript
+Mongoose
+JSX
+Sass
+JWT
+VSCode
+Google Chrome Developer Tools
 
 ## User Stories
 - As a new user, I want to be able to create a secure account and be logged in automatically. 
@@ -21,3 +34,11 @@ In the future, I would like for users to be able to add their own buttons displa
 - As a user, I want to see percentages display after I click the yes or no button.
 - As a user, I want an intuitive and clean UI.
 - As a user, I want a responsive design that is equally user-friendly on mobile devices and desktop screens.
+
+
+## In Future
+-as a user, I want to be able to add my own memoji picture for my profile to display on the home page.
+-as a user, I want to be able to create my own Poll buttons so I can have other users vote between two options.
+-as a user, I want to be able to view this on a desktop and ipad. 
+-as a user, I want to be able to login via email, facebook, or etc.
+
