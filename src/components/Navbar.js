@@ -17,16 +17,19 @@ export default function Navbar() {
                         <Link exact to="/SignUp" className="nav-link font-weight-bolder">SignUp</Link>
                     </li>
                     <li className="nav-item">
-                        <Link exact to="/LogIn</li>" className="nav-link">LogIn</Link>
+                        <Link exact to="/LogIn" className="nav-link">LogIn</Link>
                     </li>
                     <li className="nav-item">
                         <Link exact to="/Profile" className="nav-link">Profile</Link>
                     </li>
                     <li className="nav-item">
+                        <Link exact to="/MyPolls" className="nav-link">MyPolls</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link exact to="/Home" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link exact to="/LogOut" className="nav-link">LogOut</Link>
+                        <Link exact to="/" className="nav-link">LogOut</Link>
                     </li>
                 </ul>
             </div>
