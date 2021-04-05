@@ -17,17 +17,17 @@ In the future, I would like for users to be able to add their own buttons displa
 https://www.figma.com/proto/1rNYGzphIpFrAukSEVi9Ld/Untitled?node-id=29%3A4&scaling=scale-down&page-id=29%3A3 
 
 # Technologies Used
-MongoDB
-Express
-React
-Node.js
-Javascript
-Mongoose
-JSX
-Sass
-JWT
-VSCode
-Google Chrome Developer Tools
+- MongoDB
+- Express
+- React
+- Node.js
+- Javascript
+- Mongoose
+- JSX
+- Sass
+- JWT
+- VSCode
+- Google Chrome Developer Tools
 
 ## User Stories
 - As a new user, I want to be able to create a secure account and be logged in automatically. 
