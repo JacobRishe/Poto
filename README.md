@@ -16,6 +16,10 @@ In the future, I would like for users to be able to add their own buttons displa
 
 https://www.figma.com/proto/1rNYGzphIpFrAukSEVi9Ld/Untitled?node-id=29%3A4&scaling=scale-down&page-id=29%3A3 
 
+# ERD
+![image](https://user-images.githubusercontent.com/68757343/113640554-93f78180-9630-11eb-9fb2-2bc1cce8fca5.png)
+
+
 # Technologies Used
 - MongoDB
 - Express
