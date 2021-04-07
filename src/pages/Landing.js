@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Home() {
+export default function Landing() {
     return (
         <>
         <div className="this">
@@ -13,8 +14,12 @@ export default function Home() {
             <p>?</p>
         </div>
         <div>
-            <button className="login">LOGIN</button>
-            <button className="login">SIGN UP</button>
+            <Link to="/LogIn">
+                <button className="login-btn">LOGIN</button>
+            </Link>
+            <Link to="/SignUp">
+                <button className="signup-btn">SIGN UP</button>
+            </Link>
         </div>
         </>
     )
