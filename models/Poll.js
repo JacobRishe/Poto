@@ -1,28 +1,22 @@
 const mongoose = require('mongoose')
 
-const CommentSchema = new mongoose.Schema ({
-    body: String,
-    date: Date
+const ResponseSchema = new mongoose.Schema ({
+    vote: { 
+        type: Boolean,
+        default: false
+    },
 })
 
-const pollSchema = new Schema ({
+const pollSchema = new mongoose.Schema ({
 	question:  {
         type: String,
         required: true,
-        unique: true,
-        validate: {
-            validator: 
-        }
+        unique: true
   },
-	response: {
-        verified: Boolean,
-    },
-    comments: [CommentSchema],
+    response: [ResponseSchema],
 	author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true,
-        unique: true
     },
 }, {timestamps: true});
 
