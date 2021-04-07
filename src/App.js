@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="App">
       <div className="site">
-      <Navbar />
-      <Header />
-      <Routes />
-      <Footer />
+        <Navbar />
+        <Header />
+        <Routes />
+        <Footer />
       </div>
     </div>
   );
