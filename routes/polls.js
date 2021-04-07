@@ -1,13 +1,15 @@
-const express = require('express');
-const router = express.Router();
-const ctrl = require('../controllers/polls');
+const router = require('express').Router();
+const ctrl = require('../controllers');
 
 
-router.post("/findById", ctrl.findById);
-router.get("/", ctrl.index);
-router.get("/:id", ctrl.show);
-router.post("/", ctrl.create);
-router.put("/:id", ctrl.update);
-router.delete("/:id", ctrl.destroy);
+router.get('/', ctrl.polls.index);
+router.get('/:id', ctrl.polls.show);
+router.post('/', ctrl.polls.create);
+router.put('/:id', ctrl.polls.update);
+router.delete('/:id', ctrl.polls.destroy);
 
-module.exports = router
+
+
+
+
+module.exports = router;
