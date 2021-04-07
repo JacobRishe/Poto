@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 
-const userSchema = new Schema ({
+const userSchema = new mongoose.Schema ({
 	username:  {
         type: String,
         required: true,
@@ -17,8 +17,11 @@ const userSchema = new Schema ({
         required: true,
         unique: true
     },
-    polls: [{ ref: 'Poll' }]
-})
+    polls: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Poll'
+    }],
+}, {timestamps: true});
 
 
 const User = mongoose.model('User', userSchema)
