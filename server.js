@@ -1,12 +1,21 @@
+const dotenv = require('dotenv');
+dotenv.config()
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const PORT = 3000;
+const routesUrls = require('./routes')
 
+
+app.use(express.json())
 app.use(cors());
-app.use(bodyParser.json());
+app.use('/app', routesUrls.polls)
 
-app.listen(PORT, function() {
-    console.log("Server is running on Port: " + PORT);
+
+
+
+
+
+app.listen(4000, function() {
+    console.log("Server is running on Port: " + 4000);
 });
