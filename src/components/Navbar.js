@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-
 export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark" id="siteNav">
@@ -14,19 +13,13 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarsExample04">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                        <Link exact to="/SignUp" className="nav-link font-weight-bolder">SignUp</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link exact to="/LogIn" className="nav-link">LogIn</Link>
+                        <Link exact to="/Home" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link exact to="/Profile" className="nav-link">Profile</Link>
                     </li>
                     <li className="nav-item">
                         <Link exact to="/MyPolls" className="nav-link">MyPolls</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link exact to="/Home" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link exact to="/" className="nav-link">LogOut</Link>
