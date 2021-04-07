@@ -1,0 +1,19 @@
+{
+    "polls": [
+        {
+            "queston": "should I eat pizza tonight?",
+            "response": "true",
+            "author": "Jaker"
+        },
+        {
+            "queston": "should I eat bread tonight?",
+            "response": "true",
+            "author": "Jake"
+        },
+        {
+            "queston": "should I eat meatballs tonight?",
+            "response": "true",
+            "author": "Jakey"
+        }
+    ]
+  }
