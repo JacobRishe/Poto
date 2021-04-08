@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark" id="siteNav">
-            <a className="navbar-brand logo" href="/">PoTo</a>
+            <div>
+                <a className="navbar-brand logo" href="/">PoTo</a>
+                <p className="poll-together">Poll Together</p>
+            </div>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
