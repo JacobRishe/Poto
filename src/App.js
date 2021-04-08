@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Routes from './config/routes'
@@ -7,14 +7,15 @@ import Navbar from './components/Navbar'
 
 
 function App() {
+ 
+  const [userId, setUserId] = useState(null)
+
   return (
     <div className="App">
-      <div className="site">
         <Navbar />
         <Header />
-        <Routes />
+        <Routes setUserId = { setUserId } />
         <Footer />
-      </div>
     </div>
   );
 }
