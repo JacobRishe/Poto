@@ -10,12 +10,14 @@ import MyPolls from '../pages/MyPolls'
 import LogOut from '../pages/LogOut'
 
 
-const Routes = () => {
+const Routes = (props) => {
     return (
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />
-        <Route path="/login" component={LogIn} />
+        <Route path="/login">
+          <LogIn setUserId={props.setUserId} />
+        </Route>
         <Route path="/signup" component={SignUp} />
         <Route path="/profile" component={Profile} />
         <Route path="/mypolls" component={MyPolls} />
