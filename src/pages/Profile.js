@@ -5,7 +5,7 @@ import CreatePoll from '../components/CreatePoll';
 export default function Profile() {
   return (
     <div>
-      { CreatePoll }
+      < CreatePoll />
     </div>
   )
 }
