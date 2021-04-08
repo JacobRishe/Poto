@@ -1,7 +1,6 @@
 const db = require("../models");
 
 
-
 const index = (req, res) => {
     db.Poll.find({}, (err, foundPolls) => {
         if (err) console.log('Error in Polls#index:', err)
@@ -21,7 +20,16 @@ const show = (req, res) => {
 const create = (req, res) => {
     db.Poll.create(req.body, (err, savedPoll) => {
         if (err) console.log('Error in polls#create:', err)
-        // Validations and error handling here
+
+        db.User.findById(req.body.userId, (err, foundUser) => {
+            console.log(savedPoll)
+            console.log(foundUser)
+            foundUser.polls.push(savedPoll._id)
+            foundUser.save()
+        })
+        //query the db for the user who created the poll (req.body.userId)
+        //with the user from the db add the savedPoll id to user.polls
+        //user.save({}) 
         res.status(201).json({ poll: savedPoll })
     })
 }
