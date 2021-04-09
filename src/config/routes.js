@@ -9,19 +9,31 @@ import Profile from '../pages/Profile'
 import MyPolls from '../pages/MyPolls'
 import LogOut from '../pages/LogOut'
 
+import { useRecoilValue } from 'recoil'
+import { loggedInState } from '../recoil/selectors'
 
 const Routes = (props) => {
+  const loggedIn = useRecoilValue(loggedInState)
+
     return (
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route path="/home" component={Home} />
         <Route path="/login">
           <LogIn setUserId={props.setUserId} />
         </Route>
         <Route path="/signup" component={SignUp} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/mypolls" component={MyPolls} />
-        <Route exact path="/" component={LogOut} />
+
+        { loggedIn && (
+
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/profile">
+              <Profile userId={props.userId} />
+            </Route>
+            <Route path="/mypolls" component={MyPolls} />
+            <Route exact path="/" component={LogOut} />
+          </Switch>
+        )}
       </Switch>
     )
   }
