@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const ResponseSchema = new mongoose.Schema ({
     vote: { 
         type: Boolean,
-        default: false
+        default: false,
     },
 })
 
@@ -13,7 +13,7 @@ const pollSchema = new mongoose.Schema ({
         required: true,
         unique: true
   },
-    response: [ResponseSchema],
+    response: {ResponseSchema},
 	author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
