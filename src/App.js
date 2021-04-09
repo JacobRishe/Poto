@@ -8,13 +8,13 @@ import Navbar from './components/Navbar'
 
 function App() {
  
-  const [userId, setUserId] = useState(null)
+  const [userId, setUserId] = useState("606e3e5cb31f375c7dbeb0c2")
 
   return (
     <div className="App">
         <Navbar />
         <Header />
-        <Routes setUserId = { setUserId } />
+        <Routes setUserId = { setUserId } userId= { userId } />
         <Footer />
     </div>
   );
