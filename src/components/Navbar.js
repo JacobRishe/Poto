@@ -1,18 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import { useRecoilState } from 'recoil'
 import { userState } from '../recoil/atoms'
+ 
 
 export default function Navbar() {
     const [user, setUser] = useRecoilState(userState)
+
+
     function login() {
         const dbUser = {
             username: "Jaker",
             email: "test@test.com",
             password: "jacob123"
         }
-        setUser(dbUser)
+        setUser(dbUser);
+        return(
+            <Redirect to="/logIn" />
+        )
+    }
+
+    function logout() {
+        setUser(null)
     }
 
     return (
@@ -39,7 +49,7 @@ export default function Navbar() {
                                 <Link exact to="/MyPolls" className="nav-link">MyPolls</Link>
                             </li>
                             <li className="nav-item">
-                                <Link exact to="/" className="nav-link">LogOut</Link>
+                                <Link className="nav-link" onClick={ logout }>Log Out</Link>
                             </li>
 
                         </ul>
