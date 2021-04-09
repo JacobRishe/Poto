@@ -1,4 +1,4 @@
-const url = `http://localhost:4000/user`
+const url = `http://localhost:4000/api/user`
 
 
 class UserModel {
