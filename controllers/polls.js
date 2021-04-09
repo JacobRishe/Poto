@@ -11,34 +11,45 @@ const index = (req, res) => {
         res.status(200).json({ Polls: foundPolls });
     })
 }
+
+
 const show = (req, res) => {
     db.Poll.findById(req.params.id, (err, foundPoll) => {
         if (err) console.log('Error in Polls#show:', err);
         res.send("Incomplete Polls#show controller function");
+        res.json({ poll: foundPoll })
+        console.log(res.json())
     });
 };
+
+
 const create = (req, res) => {
+    console.log(req.body)
     db.Poll.create(req.body, (err, savedPoll) => {
         if (err) console.log('Error in polls#create:', err)
 
-        db.User.findById(req.body.userId, (err, foundUser) => {
+        //query the db for the user who created the poll (req.body.userId)
+        db.User.findById(req.body.author, (err, foundUser) => {
             console.log(savedPoll)
             console.log(foundUser)
+            //with the user from the db add the savedPoll id to user.polls
             foundUser.polls.push(savedPoll._id)
+             //user.save({}) 
             foundUser.save()
         })
-        //query the db for the user who created the poll (req.body.userId)
-        //with the user from the db add the savedPoll id to user.polls
-        //user.save({}) 
         res.status(201).json({ poll: savedPoll })
     })
 }
+
+
 const update = (req, res) => {
     db.Poll.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoll) => {
         if (err) console.log('Error in Polls#update:', err);
         res.send("Incomplete polls#update controller function");
     });
 };
+
+
 const destroy = (req, res) => {
     db.Poll.findByIdAndDelete(req.params.id, (err, deletedPoll) => {
         if (err) console.log('Error in Polls#destroy:', err);
