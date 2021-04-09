@@ -6,7 +6,7 @@ class NewPoll extends Component {
     state = {
       question: '',
       response: '',
-      author: false  
+      author: this.props.userId 
     }
   
     handleSubmit = (event) => {
@@ -14,7 +14,8 @@ class NewPoll extends Component {
   
       PollModel.create(this.state)
         .then(data => {
-          this.props.history.push('/polls')
+          // this.props.history.push('/polls')
+          console.log("success!")
         })
     }
   
@@ -30,21 +31,21 @@ class NewPoll extends Component {
   
     render() {
       return (
-        <div>
-
-          <h2>New Poll</h2>
-
+        <div className="createPoll">
+          <div>
+            <h2>New Poll</h2>
+          </div>
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
-              <label htmlFor="question">Type your question</label>
               <input 
+                className="placeholdertext"
                 type="text" 
+                placeholder="TYPE YOUR QUESTION"
                 name="question" 
                 onChange={this.handleChange}
                 value={this.state.question} />
             </div>
-  
-            <input type="submit" value="Create Poll" />
+            <input className="createpoll-btn" type="submit" value="Create Poll" />
           </form>
         </div>
       );
