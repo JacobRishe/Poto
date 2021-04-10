@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function SignUp() {
+    
     return (
         <div>
             <h2>Sign Up</h2>
