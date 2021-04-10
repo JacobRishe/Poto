@@ -1,4 +1,4 @@
-const url = `http://localhost:4000/api/polls`
+const url = `http://localhost:4000/api`
 
 
 
@@ -6,7 +6,7 @@ const url = `http://localhost:4000/api/polls`
 class PollModel {
   // the "static" keyword allows us to invoke the method without an instance of the class
   static all = () => {
-    return fetch(`${url}/`).then(res => res.json())
+    return fetch(`${url}/polls`).then(res => res.json())
   }
 
   static show = (pollId) => {
@@ -14,6 +14,7 @@ class PollModel {
   }
 
   static create = (pollData) => {
+    console.log(pollData)
     return fetch(`${url}/polls`, {
       method: "POST",
       headers: {
