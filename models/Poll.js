@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const ResponseSchema = new mongoose.Schema ({
-    vote: { 
-        type: Boolean,
-        default: false,
-    },
-})
+// const ResponseSchema = new mongoose.Schema ({
+//     vote: { 
+//         type: Boolean,
+//         default: false,
+//     },
+// })
 
 const pollSchema = new mongoose.Schema ({
 	question:  {
@@ -13,7 +13,16 @@ const pollSchema = new mongoose.Schema ({
         required: true,
         unique: true
   },
-    response: [ResponseSchema],
+    no: {
+        type: Number,
+        default: 0,
+    },
+    yes: {
+        type: Number,
+        default: 0,
+    },
+
+    // response: [ResponseSchema],
 	author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
