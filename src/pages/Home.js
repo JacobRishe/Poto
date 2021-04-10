@@ -12,7 +12,6 @@ export default function Home() {
                 return  <PollCard  author={currentpoll.author}  question={currentpoll.question} />
             })
             setPoll(polls)
-            console.log(data)
         })
     }, [])
 
