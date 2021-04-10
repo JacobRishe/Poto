@@ -34,21 +34,40 @@ const vote = (req, res) => {
     })
 }
 
+const voteyes = (req, res) => {
+    db.Poll.findById(req.params.id, (err, foundPoll) => {
+        if (err) console.log('poll does not show', err);
+        console.log({ foundPoll })
+        console.log(foundPoll.yes)
+        foundPoll.yes = foundPoll.yes + 1
+        foundPoll.save(err => {
+            res.json(foundPoll)
+        })
+    })
+}
+
+const voteno = (req, res) => {
+    db.Poll.findById(req.params.id, (err, foundPoll) => {
+        if (err) console.log('poll does not show', err);
+        console.log({ foundPoll })
+        console.log(foundPoll.no)
+        foundPoll.no = foundPoll.no + 1
+        foundPoll.save(err => {
+            res.json(foundPoll)
+        })
+    })
+}
+
 
 const create = (req, res) => {
     console.log('================', req.body)
-    db.Poll.create(req.body, (err, savedPoll) => {
+    db.Poll.create(req.body, (savedPoll, err) => {
         if (err && err.code === 11000) {
             res.status(500).json({ error: 'You have already asked this question'})
         } else if (err) {console.log('Error in polls#create:', err)}
-
-        //query the db for the user who created the poll (req.body.userId)
         db.User.findById(req.body.author, (err, foundUser) => {
-            // console.log(savedPoll)
-            // console.log(foundUser)
-            //with the user from the db add the savedPoll id to user.polls
+            console.log(savedPoll)
             foundUser.polls.push(savedPoll._id)
-             //user.save({}) 
             foundUser.save()
         })
     })
@@ -77,4 +96,6 @@ module.exports = {
     vote,
     update,
     destroy,
+    voteyes,
+    voteno,
 };
