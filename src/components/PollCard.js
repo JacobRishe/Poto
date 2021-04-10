@@ -17,10 +17,10 @@ function yesCount() {
     <div className="pollcard">
       <h3>{ props.question }</h3>
       <p>By: { props.author }</p>
-      <hr />
       <button onClick={ yesCount }>Yes</button>
       <span>{ count }</span>
       <button onClick={ noCount }>No</button>
+      <hr />
     </div>
   );
 }
