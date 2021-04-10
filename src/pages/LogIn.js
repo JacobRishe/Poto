@@ -3,23 +3,25 @@ import { Link } from 'react-router-dom'
 
 export default function LogIn() {
     return (
-        <div>
-            <h2>LogIn</h2>
+        <div className="loginpage-container">
+            <h2 className="login-title">LogIn</h2>
             {/* <form onSubmit={this.handleSubmit}> */}
-            <form>
-                <div className="form-input">
-                    <label htmlFor="title">Username</label>
+            <form className="login-form">
+                <div className="form-inputs">
                     <input 
+                    className="login-input"
+                    placeholder="USERNAME"
                     type="text" 
-                    name="title" /> 
+                    name="username" /> 
                     {/* // onChange={this.handleChange}
                     // value={this.state.title} /> */}
                 </div>
-                <div className="form-input">
-                    <label htmlFor="publisher">Password</label>
+                <div className="form-inputs">
                     <input 
+                    className="login-input"
+                    placeholder="PASSWORD"
                     type="text" 
-                    name="publisher" />
+                    name="password" />
                     {/* // onChange={this.handleChange}
                     // value={this.state.publisher} /> */}
                 </div>

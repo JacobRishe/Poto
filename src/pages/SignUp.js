@@ -5,38 +5,41 @@ import { Link } from 'react-router-dom'
 export default function SignUp() {
     
     return (
-        <div>
-            <h2>Sign Up</h2>
-            <form>
+        <div className="signup-container">
+            <h2 className="signup-title">Sign Up</h2>
+            <form className="signup-form">
             {/* <form onSubmit={this.handleSubmit}> */}
-                <div className="username-input">
-                    <label htmlFor="title">Username</label>
+                <div className="form-inputs">
                     <input 
+                    className="signup-input"
+                    placeholder="USERNAME"
                     type="text" 
-                    name="title" /> 
+                    name="username" /> 
                     {/* // onChange={this.handleChange}
                     // value={this.state.title} /> */}
                 </div>
-                <div className="password-input">
-                    <label htmlFor="publisher">Password</label>
+                <div className="form-inputs">
                     <input 
+                    className="signup-input"
+                    placeholder="PASSWORD"
                     type="text" 
-                    name="publisher" />
+                    name="password" />
                     {/* // onChange={this.handleChange}
                     // value={this.state.publisher} /> */}
                 </div>
-                <div className="form-input">
-                    <label htmlFor="coverArtUrl">Email</label>
+                <div className="form-inputs">
                     <input 
+                    className="signup-input"
+                    placeholder="EMAIL"
                     type="text" 
-                    name="coverArtUrl" />
+                    name="email" />
                     {/* // onChange={this.handleChange}
                     // value={this.state.coverArtUrl} /> */}
                 </div>
             </form>
             <div>
                 <Link to="/Home">
-                    <button className="signuppage-btn">SIGN UP</button>
+                    <button className="signuppage-btn">SUBMIT</button>
                 </Link>
             </div>
       </div>
