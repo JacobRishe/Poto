@@ -13,6 +13,26 @@ class PollModel {
     return fetch(`${url}/polls/${pollId}`).then(res => res.json())
   }
 
+  static yes = (pollId) => {
+    return fetch(`${url}/polls/${pollId}/voteyes`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    }).then(res => res.json())
+  
+  }
+
+  static no = (pollId) => {
+    return fetch(`${url}/polls/${pollId}/voteno`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    }).then(res => res.json())
+  }
+
+
   static create = (pollData) => {
     console.log(pollData)
     return fetch(`${url}/polls`, {
