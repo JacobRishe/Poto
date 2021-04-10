@@ -13,7 +13,7 @@ const pollSchema = new mongoose.Schema ({
         required: true,
         unique: true
   },
-    response: {ResponseSchema},
+    response: [ResponseSchema],
 	author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
