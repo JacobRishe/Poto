@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+
 import Landing from '../pages/Landing'
 import Home from '../pages/Home'
 import LogIn from '../pages/LogIn'
@@ -27,9 +28,9 @@ const Routes = (props) => {
 
           <Switch>
             <Route path="/home" component={Home} />
-            <Route path="/profile">
-              <Profile userId={props.userId} />
-            </Route>
+            <Route path="/profile" render={(routeProps) => {
+              return <Profile { ...routeProps } userId={ props.userId } />
+            }} />
             <Route path="/mypolls" component={MyPolls} />
             <Route exact path="/" component={LogOut} />
           </Switch>
