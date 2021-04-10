@@ -4,7 +4,7 @@ import PollCard from "../components/PollCard"
 
 export default function Home() {
 
-    const [poll, setPoll] = useState([])
+    const [poll, setPoll] = useState()
 
     useEffect(() => {
         PollModel.all().then(data => {
@@ -16,12 +16,9 @@ export default function Home() {
         })
     }, [])
 
-
-
     return (
         <div className="polls">
             { poll }
-            <button></button>
         </div>
     )
 }
