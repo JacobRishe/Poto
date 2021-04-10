@@ -5,7 +5,7 @@ function CreatePoll(props) {
   console.log(props)
   const [question, setQuestion] = useState("");
   const [author, setAuthor] = useState("606e3e5cb31f375c7dbeb0c2");
-  const [response, setResponse] = useState("false");
+  const [response, setResponse] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -13,7 +13,7 @@ function CreatePoll(props) {
     PollModel.create({ 
       question, 
       author, 
-      response })
+      })
       .then(data => {
         console.log(data)
         props.history.push('/home')
