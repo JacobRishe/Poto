@@ -35,9 +35,6 @@ const vote = (req, res) => {
 }
 
 
-
-
-
 const create = (req, res) => {
     console.log('================', req.body)
     db.Poll.create(req.body, (err, savedPoll) => {
