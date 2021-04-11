@@ -22,6 +22,11 @@ export default function Landing() {
                     <button className="signup-btn">SIGN UP</button>
                 </Link>
             </div>
+            <div className="about-app">
+                <p>
+                    A place for indecisive people where you vote or cast your opinion on other users polls. 
+                </p>
+            </div>
         </div>
     )
 }
