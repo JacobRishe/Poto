@@ -2,7 +2,7 @@ const db = require("../models");
 
 
 const index = (req, res) => {
-    db.Poll.find({}, (err, foundPolls) => {
+    db.Poll.find({}).populate("author").exec((err, foundPolls) => {
         if (err) console.log('Error in Polls#index:', err)
         if(!foundPolls) return res.json({
             message: 'No Polls found in database.'
@@ -35,9 +35,11 @@ const vote = (req, res) => {
 }
 
 const voteyes = (req, res) => {
+    console.log(req.params.id)
     db.Poll.findById(req.params.id, (err, foundPoll) => {
         if (err) console.log('poll does not show', err);
-        console.log({ foundPoll })
+        console.log(err)
+        console.log( foundPoll )
         console.log(foundPoll.yes)
         foundPoll.yes = foundPoll.yes + 1
         foundPoll.save(err => {
@@ -49,7 +51,7 @@ const voteyes = (req, res) => {
 const voteno = (req, res) => {
     db.Poll.findById(req.params.id, (err, foundPoll) => {
         if (err) console.log('poll does not show', err);
-        console.log({ foundPoll })
+        console.log( foundPoll )
         console.log(foundPoll.no)
         foundPoll.no = foundPoll.no + 1
         foundPoll.save(err => {
@@ -61,7 +63,7 @@ const voteno = (req, res) => {
 
 const create = (req, res) => {
     console.log('================', req.body)
-    db.Poll.create(req.body, (savedPoll, err) => {
+    db.Poll.create(req.body, (err, savedPoll) => {
         if (err && err.code === 11000) {
             res.status(500).json({ error: 'You have already asked this question'})
         } else if (err) {console.log('Error in polls#create:', err)}
