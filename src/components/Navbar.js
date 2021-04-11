@@ -23,6 +23,9 @@ export default function Navbar() {
 
     function logout() {
         setUser(null)
+    return(
+        <Redirect to="/" />
+        )
     }
 
     return (
@@ -38,7 +41,6 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarsExample04">
                         <ul className="navbar-nav mr-auto">
-                    
                             <li className="nav-item">
                                 <Link exact to="/Home" className="nav-link">Home</Link>
                             </li>
@@ -49,9 +51,8 @@ export default function Navbar() {
                                 <Link exact to="/MyPolls" className="nav-link">MyPolls</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" onClick={ logout }>Log Out</Link>
+                                <Link to="/" className="nav-link">Log Out</Link>
                             </li>
-
                         </ul>
                     </div>
                 </>
