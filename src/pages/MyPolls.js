@@ -9,7 +9,8 @@ export default function MyPolls() {
     useEffect(() => {
         PollModel.all().then(data => {
             const polls = data.Polls.map((currentpoll, index) => {
-                return  <PollCard  author={currentpoll.author}  question={currentpoll.question} />
+                console.log(currentpoll.author.username)
+                return  <PollCard  author={currentpoll.author.username}  question={currentpoll.question} />
             })
             setPoll(polls)
         })
