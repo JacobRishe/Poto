@@ -11,42 +11,44 @@ const PollCard = (props) => {
   const [clicked, setClicked] = useState(false)
 
   function noCount() {
-    console.log(props.question)
     PollModel.no(props.questionid).then(data => {
-      console.log(data)
       setClicked(true)
       let temp = data.no
       temp += data.yes
       setCount(temp)
       setYes(data.yes)
-      let answer = ((data.yes / temp) * 100).toFixed(0)
-      setPercent(String(answer) + "%")
+      let answer = ((data.no / temp) * 100).toFixed(0)
+      setPercent(String(answer) + "%" + " " + "SAY NO")
   })
 }
 
   function yesCount() {
     PollModel.yes(props.questionid).then(data => {
-      console.log(data)
       setClicked(true)
       let temp = data.yes
       temp += data.no
       setCount(temp)
       setYes(data.yes)
       let answer = ((data.yes / temp) * 100).toFixed(0)
-      setPercent(String(answer) + "%")
+      setPercent(String(answer) + "%" + " "+ "SAY YES")
   })
 }
 
   return (
     <div className="pollcard">
-      <h3>{ props.question }</h3>
-      <p>{ props.author }</p>
-      {!clicked ?  <>
+      <div className="author-container">
+        <p className="author">{ props.author }</p>
+      </div>
+      <h3 className="question">{ props.question }</h3>
+      {!clicked ?  
+      <div className="yesno-btns">
         <button className="yes-btn" onClick={ yesCount }>Yes</button>
         <button className="no-btn"onClick={ noCount }>No</button>
         <hr />
-        </>: 
-        <p>{ percent }</p>
+      </div>: 
+        <div className="percentage-container">
+          <p className="percentage">{ percent }</p>
+        </div>
       }
     </div>
   );
