@@ -22,7 +22,7 @@ function CreatePoll(props) {
 
   return (
     <div className="createPoll">
-      <h2>New Poll</h2>
+      <h2 className="newpoll">New Poll</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-input">
         <input 
@@ -33,21 +33,21 @@ function CreatePoll(props) {
             onChange={(e) => setQuestion(e.target.value)}
             value={question} />
         </div>
-        <div className="form-input">
+        <div>
           <input 
             type="hidden" 
             name="author" 
             onChange={(e) => setAuthor(e.target.value)}
             value={author} />
         </div>
-        <div className="form-input">
+        <div>
           <input 
             type="hidden" 
             name="resonse" 
             onChange={(e) => setResponse(e.target.value)}
             value={response} />
         </div>
-        <input onClick={ handleSubmit } className="createpoll-btn" type="submit" value="Create Poll"/>
+        <button onClick={ handleSubmit } className="createpoll-btn" type="submit"><span className="create">CREATE</span> POLL</button>
       </form>
     </div>
   );
