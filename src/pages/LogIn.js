@@ -5,7 +5,6 @@ export default function LogIn() {
     return (
         <div className="loginpage-container">
             <h2 className="login-title">LogIn</h2>
-            {/* <form onSubmit={this.handleSubmit}> */}
             <form className="login-form">
                 <div className="form-inputs">
                     <input 
@@ -13,8 +12,6 @@ export default function LogIn() {
                     placeholder="USERNAME"
                     type="text" 
                     name="username" /> 
-                    {/* // onChange={this.handleChange}
-                    // value={this.state.title} /> */}
                 </div>
                 <div className="form-inputs">
                     <input 
@@ -22,8 +19,6 @@ export default function LogIn() {
                     placeholder="PASSWORD"
                     type="text" 
                     name="password" />
-                    {/* // onChange={this.handleChange}
-                    // value={this.state.publisher} /> */}
                 </div>
             </form>
             <div>
