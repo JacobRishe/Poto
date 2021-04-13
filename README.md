@@ -11,18 +11,27 @@ The app features full user authentication and allows for the user to create an a
 
 In the future, I would like for users to be able to add their own buttons displaying a this or that question rather than a yes or no question. Want the user to be able to upload their own memoji and have it displayed next to their poll that they posted. 
 
+# wireframes (click the link below and view the full wireframes)
+![image](https://user-images.githubusercontent.com/68757343/113640308-ff8d1f00-962f-11eb-9f2e-8dacdf8a2615.png) 
+
+https://www.figma.com/proto/1rNYGzphIpFrAukSEVi9Ld/Untitled?node-id=29%3A4&scaling=scale-down&page-id=29%3A3 
+
+# ERD
+![image](https://user-images.githubusercontent.com/68757343/113640554-93f78180-9630-11eb-9fb2-2bc1cce8fca5.png)
+
+
 # Technologies Used
-MongoDB
-Express
-React
-Node.js
-Javascript
-Mongoose
-JSX
-Sass
-JWT
-VSCode
-Google Chrome Developer Tools
+- MongoDB
+- Express
+- React
+- Node.js
+- Javascript
+- Mongoose
+- JSX
+- Sass
+- JWT
+- VSCode
+- Google Chrome Developer Tools
 
 ## User Stories
 - As a new user, I want to be able to create a secure account and be logged in automatically. 
