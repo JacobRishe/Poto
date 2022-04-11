@@ -10,7 +10,7 @@ export default function Home() {
         PollModel.all().then(data => {
             const polls = data.Polls.map((currentpoll, index) => {
                 console.log(currentpoll)
-                return  <PollCard  author={currentpoll.author.username}  question={currentpoll.question} questionid={currentpoll._id}/>
+                return  <PollCard  author={ currentpoll.author.username }  question={ currentpoll.question } questionid={currentpoll._id}/>
             })
             setPoll(polls)
         })

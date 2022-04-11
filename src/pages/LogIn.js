@@ -8,17 +8,17 @@ export default function LogIn() {
             <form className="login-form">
                 <div className="form-inputs">
                     <input 
-                    className="login-input"
-                    placeholder="USERNAME"
-                    type="text" 
-                    name="username" /> 
+                        className="login-input"
+                        placeholder="USERNAME"
+                        type="text" 
+                        name="username" /> 
                 </div>
                 <div className="form-inputs">
                     <input 
-                    className="login-input"
-                    placeholder="PASSWORD"
-                    type="text" 
-                    name="password" />
+                        className="login-input"
+                        placeholder="PASSWORD"
+                        type="text" 
+                        name="password" />
                 </div>
             </form>
             <div>

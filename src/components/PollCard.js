@@ -43,7 +43,7 @@ const PollCard = (props) => {
       {!clicked ?  
       <div className="yesno-btns">
         <button className="yes-btn" onClick={ yesCount }>Yes</button>
-        <button className="no-btn"onClick={ noCount }>No</button>
+        <button className="no-btn" onClick={ noCount }>No</button>
         <hr />
       </div>: 
         <div className="percentage-container">
